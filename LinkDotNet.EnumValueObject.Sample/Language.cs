@@ -4,7 +4,7 @@
     {
         public static readonly Language German = new Language("de", "€");
 
-        public static readonly Language English = new Language("de", "£");
+        public static readonly Language English = new Language("en", "£");
         public string Currency { get; }
 
         public Language(string key, string currency) : base(key)
