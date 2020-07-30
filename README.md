@@ -19,13 +19,13 @@ public class Language : EnumValueObject<Language>
 
     public static readonly Language English = new Language("en");
 
-    public Language(string key) : base(key)
+    protected Language(string key) : base(key)
     {
     }
 }
 ```
 
-To create an `EnumValueObject` you have to call the static `Create` method
+To create an `EnumValueObject` you have to call the static `Create` method. Define your constructor always protected or private so that the consumer has to take the `Create` method.
 ```csharp
 var languageResult = Language.Create("en");
 ```

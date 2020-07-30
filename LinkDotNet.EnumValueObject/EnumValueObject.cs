@@ -14,7 +14,6 @@ namespace LinkDotNet.EnumValueObject
 
         private string _key;
 
-        // ReSharper disable once UnusedMember.Global needed for ORM
         protected EnumValueObject()
         {
         }
@@ -82,14 +81,6 @@ namespace LinkDotNet.EnumValueObject
             }
 
             return Result.Success(enumeration);
-        }
-
-        public override string ToString()
-        {
-            // Split Camel- or Pascal-cased key into words separated by a space
-            var splitKey = Regex.Replace(_key, @"((?<!^)([A-Z][a-z]|(?<=[a-z])[A-Z]))", " $1");
-
-            return CultureInfo.InvariantCulture.TextInfo.ToTitleCase(splitKey);
         }
 
         protected override IEnumerable<object> GetEqualityComponents()

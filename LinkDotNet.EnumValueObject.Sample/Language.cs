@@ -7,7 +7,7 @@
         public static readonly Language English = new Language("en", "£");
         public string Currency { get; }
 
-        public Language(string key, string currency) : base(key)
+        private Language(string key, string currency) : base(key)
         {
             Currency = currency;
         }
