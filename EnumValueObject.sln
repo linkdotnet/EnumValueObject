@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30320.27
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkDotNet.EnumValueObject", "LinkDotNet.EnumValueObject\LinkDotNet.EnumValueObject.csproj", "{D5769B9E-B192-40AF-AA3F-47D0EED7CFFC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinkDotNet.EnumValueObject", "LinkDotNet.EnumValueObject\LinkDotNet.EnumValueObject.csproj", "{D5769B9E-B192-40AF-AA3F-47D0EED7CFFC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkDotNet.EnumValueObject.Sample", "LinkDotNet.EnumValueObject.Sample\LinkDotNet.EnumValueObject.Sample.csproj", "{5342C413-DF99-4763-944D-641B14D67F68}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinkDotNet.EnumValueObject.Sample", "LinkDotNet.EnumValueObject.Sample\LinkDotNet.EnumValueObject.Sample.csproj", "{5342C413-DF99-4763-944D-641B14D67F68}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkDotNet.EnumValueObject.Sample.EFCore", "LinkDotNet.EnumValueObject.Sample.EFCore\LinkDotNet.EnumValueObject.Sample.EFCore.csproj", "{96D2C3B7-8A1B-422A-8372-4B3FF6EFCC28}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{5342C413-DF99-4763-944D-641B14D67F68}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5342C413-DF99-4763-944D-641B14D67F68}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5342C413-DF99-4763-944D-641B14D67F68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96D2C3B7-8A1B-422A-8372-4B3FF6EFCC28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96D2C3B7-8A1B-422A-8372-4B3FF6EFCC28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96D2C3B7-8A1B-422A-8372-4B3FF6EFCC28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96D2C3B7-8A1B-422A-8372-4B3FF6EFCC28}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
