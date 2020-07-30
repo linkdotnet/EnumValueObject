@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\LinkDotNet.EnumValueObject\LinkDotNet.EnumValueObject.csproj" />
+    <ProjectReference Include="..\..\LinkDotNet.EnumValueObject\LinkDotNet.EnumValueObject.csproj" />
   </ItemGroup>
 
 </Project>

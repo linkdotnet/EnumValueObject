@@ -5,9 +5,11 @@ VisualStudioVersion = 16.0.30320.27
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinkDotNet.EnumValueObject", "LinkDotNet.EnumValueObject\LinkDotNet.EnumValueObject.csproj", "{D5769B9E-B192-40AF-AA3F-47D0EED7CFFC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinkDotNet.EnumValueObject.Sample", "LinkDotNet.EnumValueObject.Sample\LinkDotNet.EnumValueObject.Sample.csproj", "{5342C413-DF99-4763-944D-641B14D67F68}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{A3BD761C-BD7B-4851-A938-5A4FF73BBD54}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkDotNet.EnumValueObject.Sample.EFCore", "LinkDotNet.EnumValueObject.Sample.EFCore\LinkDotNet.EnumValueObject.Sample.EFCore.csproj", "{96D2C3B7-8A1B-422A-8372-4B3FF6EFCC28}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinkDotNet.EnumValueObject.Sample.EFCore", "Samples\LinkDotNet.EnumValueObject.Sample.EFCore\LinkDotNet.EnumValueObject.Sample.EFCore.csproj", "{63ACBCDB-E69E-4C22-8916-E97B3BB7D5F4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinkDotNet.EnumValueObject.Sample", "Samples\LinkDotNet.EnumValueObject.Sample\LinkDotNet.EnumValueObject.Sample.csproj", "{F1B19454-305F-435F-98F6-22FBCE1FF056}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,17 +21,21 @@ Global
 		{D5769B9E-B192-40AF-AA3F-47D0EED7CFFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5769B9E-B192-40AF-AA3F-47D0EED7CFFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5769B9E-B192-40AF-AA3F-47D0EED7CFFC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5342C413-DF99-4763-944D-641B14D67F68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5342C413-DF99-4763-944D-641B14D67F68}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5342C413-DF99-4763-944D-641B14D67F68}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5342C413-DF99-4763-944D-641B14D67F68}.Release|Any CPU.Build.0 = Release|Any CPU
-		{96D2C3B7-8A1B-422A-8372-4B3FF6EFCC28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{96D2C3B7-8A1B-422A-8372-4B3FF6EFCC28}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{96D2C3B7-8A1B-422A-8372-4B3FF6EFCC28}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{96D2C3B7-8A1B-422A-8372-4B3FF6EFCC28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63ACBCDB-E69E-4C22-8916-E97B3BB7D5F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63ACBCDB-E69E-4C22-8916-E97B3BB7D5F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63ACBCDB-E69E-4C22-8916-E97B3BB7D5F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63ACBCDB-E69E-4C22-8916-E97B3BB7D5F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1B19454-305F-435F-98F6-22FBCE1FF056}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1B19454-305F-435F-98F6-22FBCE1FF056}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1B19454-305F-435F-98F6-22FBCE1FF056}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1B19454-305F-435F-98F6-22FBCE1FF056}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{63ACBCDB-E69E-4C22-8916-E97B3BB7D5F4} = {A3BD761C-BD7B-4851-A938-5A4FF73BBD54}
+		{F1B19454-305F-435F-98F6-22FBCE1FF056} = {A3BD761C-BD7B-4851-A938-5A4FF73BBD54}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DE9A468A-F35F-463B-B11C-8769F5307935}
