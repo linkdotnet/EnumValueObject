@@ -1,8 +1,6 @@
 ﻿using System.Collections.Generic;
-using System.Globalization;
 using System.Linq;
 using System.Reflection;
-using System.Text.RegularExpressions;
 using CSharpFunctionalExtensions;
 
 namespace LinkDotNet.EnumValueObject
@@ -81,6 +79,14 @@ namespace LinkDotNet.EnumValueObject
             }
 
             return Result.Success(enumeration);
+        }
+
+        public override int GetHashCode()
+        {
+            var hash = 13;
+            hash = (hash * 7) + _key.GetHashCode();
+
+            return hash;
         }
 
         protected override IEnumerable<object> GetEqualityComponents()
