@@ -84,10 +84,12 @@ namespace LinkDotNet.EnumValueObject
         public override int GetHashCode()
         {
             var hash = 13;
-            hash = (hash * 7) + _key.GetHashCode();
+            hash = (hash * 7) + Key.GetHashCode();
 
             return hash;
         }
+
+        public override string ToString() => Key;
 
         protected override IEnumerable<object> GetEqualityComponents()
         {
