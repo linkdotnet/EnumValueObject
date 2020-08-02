@@ -83,10 +83,7 @@ namespace LinkDotNet.EnumValueObject
 
         public override int GetHashCode()
         {
-            var hash = 13;
-            hash = (hash * 7) + Key.GetHashCode();
-
-            return hash;
+            return Key.GetHashCode();
         }
 
         public override string ToString() => Key;
