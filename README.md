@@ -76,7 +76,7 @@ public class Language : EnumValueObject<Language>
 
     public string Currency { get; }
 
-    public Language(string key, string currency) : base(key)
+    protected Language(string key, string currency) : base(key)
     {
         Currency = currency;
     }
