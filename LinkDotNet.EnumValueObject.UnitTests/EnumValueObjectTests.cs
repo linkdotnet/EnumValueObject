@@ -73,7 +73,7 @@ namespace LinkDotNet.EnumValueObject.UnitTests
         [DataRow(null)]
         [DataRow("")]
         [DataRow("  ")]
-        public void GivenNullOrEmptyKey_WhenCreating_ThenThen(string key)
+        public void GivenNullOrEmptyKey_WhenCreating_ThenException(string key)
         {
             Assert.ThrowsException<ArgumentException>(() => new TestEnumValueObject(key));
         }
