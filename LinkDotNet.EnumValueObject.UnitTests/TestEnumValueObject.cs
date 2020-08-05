@@ -6,7 +6,7 @@
 
         public static readonly TestEnumValueObject Two = new TestEnumValueObject(nameof(Two));
 
-        private TestEnumValueObject(string key) : base(key)
+        public TestEnumValueObject(string key) : base(key)
         {
         }
     }

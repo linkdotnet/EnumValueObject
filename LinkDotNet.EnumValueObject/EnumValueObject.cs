@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using CSharpFunctionalExtensions;
@@ -18,6 +19,11 @@ namespace LinkDotNet.EnumValueObject
 
         protected EnumValueObject(string key)
         {
+            if (string.IsNullOrWhiteSpace(key))
+            {
+                throw new ArgumentException("The enum key cannot be null or empty");
+            }
+
             _key = key;
         }
 

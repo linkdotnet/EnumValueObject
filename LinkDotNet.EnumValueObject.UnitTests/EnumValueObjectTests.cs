@@ -1,3 +1,4 @@
+using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Shouldly;
 
@@ -66,6 +67,15 @@ namespace LinkDotNet.EnumValueObject.UnitTests
             // Assert
             result.IsFailure.ShouldBeTrue();
             result.Error.ShouldBe("The type 'InvalidKey' is not a valid TestEnumValueObject.");
+        }
+
+        [DataTestMethod]
+        [DataRow(null)]
+        [DataRow("")]
+        [DataRow("  ")]
+        public void GivenNullOrEmptyKey_WhenCreating_ThenThen(string key)
+        {
+            Assert.ThrowsException<ArgumentException>(() => new TestEnumValueObject(key));
         }
     }
 }
