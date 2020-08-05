@@ -9,12 +9,12 @@
     <Description>A better enumvalueobject</Description>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
-    <PackageTags>ValueObject Enum EnumValueObject</PackageTags>
-    <Version>1.0.3</Version>
+    <PackageTags>ValueObject Enum EnumValueObject domain-driven-design</PackageTags>
+    <Version>1.0.4</Version>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="CSharpFunctionalExtensions" Version="2.11.1" />
+    <PackageReference Include="CSharpFunctionalExtensions" Version="2.11.4" />
   </ItemGroup>
 
   <ItemGroup>
