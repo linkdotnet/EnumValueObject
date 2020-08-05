@@ -9,6 +9,9 @@ Available on [![Nuget downloads](https://img.shields.io/nuget/v/LinkDotNet.EnumV
 
 	PM> Install-Package LinkDotNet.EnumValueObject
 
+### Extensions
+LinkDotNet.EnumValueObject.Converter.JsonConverter: [![Nuget downloads](https://img.shields.io/nuget/v/LinkDotNet.EnumValueObject.Converter.JsonConverter)](https://www.nuget.org/packages/LinkDotNet.EnumValueObject.Converter.JsonConverter) - use EnumValueObjects with System.Text.Json.JsonSerializer
+
 ## Type safety from beginning to end
 With this `EnumValueObject` you can only create a valid state of the object itself. Imagine this small `EnumValueObject`
 
@@ -91,3 +94,14 @@ var currency = language.Currency; // €
 
 ## Database friendly
 It is enough to store the key to the database. When the `EnumValueObject` is populated it will automatically set all the dependent properties (like the currency in the last example).
+
+## JSON Serializer Support
+See the samples how to use `EnumValueObjects` with the `System.Text.Json.JsonSerializer` without any problems. With the extension you don't have to provide a public parameterless constructor. Just add the attribute to your property and you are done.
+
+```csharp
+public class MyDto
+{
+    [JsonConverter(typeof(EnumValueObjectJsonConverter<MyEnumValueObject>))]
+    public MyEnumValueObject MyEnumValueObject { get; set; }
+}
+```
