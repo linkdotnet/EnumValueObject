@@ -1,3 +1,4 @@
+
 # EnumValueObject
 
 The EnumValueObject is based on the `ValueObject` class from [here](https://github.com/vkhorikov/CSharpFunctionalExtensions) (credits to: [vkhorikov](https://github.com/vkhorikov)).
@@ -10,7 +11,9 @@ Available on [![Nuget downloads](https://img.shields.io/nuget/v/LinkDotNet.EnumV
 	PM> Install-Package LinkDotNet.EnumValueObject
 
 ### Extensions
-LinkDotNet.EnumValueObject.Converter.JsonConverter: [![Nuget downloads](https://img.shields.io/nuget/v/LinkDotNet.EnumValueObject.Converter.JsonConverter)](https://www.nuget.org/packages/LinkDotNet.EnumValueObject.Converter.JsonConverter) - use EnumValueObjects with System.Text.Json.JsonSerializer
+| Package | Download | Description |
+|-|-|-|
+| LinkDotNet.EnumValueObject.Converter.JsonConverter | [![Nuget downloads](https://img.shields.io/nuget/v/LinkDotNet.EnumValueObject.Converter.JsonConverter)](https://www.nuget.org/packages/LinkDotNet.EnumValueObject.Converter.JsonConverter) | Use EnumValueObjects with System.Text.Json.JsonSerializer |
 
 ## Type safety from beginning to end
 With this `EnumValueObject` you can only create a valid state of the object itself. Imagine this small `EnumValueObject`
