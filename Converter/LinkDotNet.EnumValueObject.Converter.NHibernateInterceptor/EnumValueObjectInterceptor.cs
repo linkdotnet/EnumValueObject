@@ -30,8 +30,6 @@ namespace LinkDotNet.EnumValueObject.Converter.NHibernateInterceptor
             }
 
             return base.Instantiate(clazz, id);
-
-
         }
     }
 }
