@@ -19,6 +19,7 @@ namespace LinkDotNet.EnumValueObject.Sample.NHibernateConverter
 
         public void Initialize()
         {
+            Environment.UseReflectionOptimizer = false;
             _sessionFactory = CreateSessionFactory();
         }
 
@@ -26,11 +27,11 @@ namespace LinkDotNet.EnumValueObject.Sample.NHibernateConverter
         {
             return Fluently.Configure()
                 .Database(SQLiteConfiguration.Standard.InMemory().ShowSql())
-                .ProxyFactoryFactory<EnumValueObjectFactoryFactory>()
                 .Mappings(m => m.FluentMappings.AddFromAssemblyOf<RootEntityMap>())
                 .ExposeConfiguration(cfg =>
                 {
                     cfg.SetInterceptor(new EnumValueObjectInterceptor());
+                    cfg.Proxy(c => c.ProxyFactoryFactory<EnumValueObjectFactoryFactory>());
                     _configuration = cfg;
                 })
                 .BuildSessionFactory();
