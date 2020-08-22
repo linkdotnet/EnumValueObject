@@ -25,7 +25,6 @@ namespace LinkDotNet.EnumValueObject.Converter.NHibernateInterceptor
                     throw new ArgumentException($"Could not create {type.FullName} from key {id}");
                 }
 
-                // Call the static Create method
                 return result.Value;
             }
 
