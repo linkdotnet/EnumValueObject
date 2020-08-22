@@ -2,16 +2,21 @@
 
 namespace LinkDotNet.EnumValueObject.Sample.NHibernateConverter
 {
-    class Program
+    public static class Program
     {
-        static void Main(string[] args)
+        public static void Main()
         {
             var entity = new RootEntity {SampleEnumValueObject = SampleEnumValueObject.Second};
             InMemorySessionFactoryProvider.Instance.Initialize();
-            var session = InMemorySessionFactoryProvider.Instance.OpenSession();
+            SaveEntity(entity);
+        }
+
+        private static void SaveEntity(RootEntity entity)
+        {
+            using var session = InMemorySessionFactoryProvider.Instance.OpenSession();
             session.Save(entity);
             session.Flush();
-            Console.WriteLine("Hello World!");
+            session.Clear();
         }
     }
 }
