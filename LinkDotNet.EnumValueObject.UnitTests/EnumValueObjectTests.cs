@@ -75,7 +75,22 @@ namespace LinkDotNet.EnumValueObject.UnitTests
         [DataRow("  ")]
         public void GivenNullOrEmptyKey_WhenCreating_ThenException(string key)
         {
+            // Assert
             Assert.ThrowsException<ArgumentException>(() => new TestEnumValueObject(key));
+        }
+
+        [DataTestMethod]
+        [DataRow(null, false)]
+        [DataRow("Four", false)]
+        [DataRow(nameof(TestEnumValueObject.Two), true)]
+        [DataRow(nameof(TestEnumValueObject.One), true)]
+        public void GivenPossibleKey_WhenCheckingIfKeyIsEnumValueObject_ThenShouldReturnTrueIfKeyRecognized(string possibleKey, bool isIn)
+        {
+            // Act
+            var isEnumValueObject = TestEnumValueObject.Is(possibleKey);
+
+            // Assert
+            isEnumValueObject.ShouldBe(isIn);
         }
     }
 }

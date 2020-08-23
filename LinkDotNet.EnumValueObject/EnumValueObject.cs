@@ -27,7 +27,7 @@ namespace LinkDotNet.EnumValueObject
             _key = key;
         }
 
-        public static IReadOnlyList<TEnumeration> All => Enumerations;
+        public static IReadOnlyCollection<TEnumeration> All => Enumerations;
 
         public virtual string Key
         {
@@ -87,10 +87,9 @@ namespace LinkDotNet.EnumValueObject
             return Result.Success(enumeration);
         }
 
-        public override int GetHashCode()
-        {
-            return Key.GetHashCode();
-        }
+        public static bool Is(string possibleKey) => All.Select(e => e.Key).Contains(possibleKey);
+
+        public override int GetHashCode() => Key.GetHashCode();
 
         public override string ToString() => Key;
 
