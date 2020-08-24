@@ -7,7 +7,7 @@ namespace LinkDotNet.EnumValueObject.Sample.NHibernateConverter
         public RootEntityMap()
         {
             Not.LazyLoad();
-            Id(r => r.Id);
+            Id(r => r.Id).GeneratedBy.Identity();
             Component(r => r.SampleEnumValueObject, part => part.Map(e => e.Key));
         }
     }

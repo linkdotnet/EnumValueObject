@@ -3,11 +3,11 @@ using NHibernate.Proxy;
 
 namespace LinkDotNet.EnumValueObject.Converter.NHibernateInterceptor
 {
-    public class EnumValueObjectConstructorValidator : DynProxyTypeValidator
+    internal class EnumValueObjectConstructorValidator : DynProxyTypeValidator
     {
         protected override bool HasVisibleDefaultConstructor(Type type)
         {
-            return type.IsSubclassOf(typeof(EnumValueObject<>)) || base.HasVisibleDefaultConstructor(type);
+            return type.IsSubclass(typeof(EnumValueObject<>)) || base.HasVisibleDefaultConstructor(type);
         }
     }
 }

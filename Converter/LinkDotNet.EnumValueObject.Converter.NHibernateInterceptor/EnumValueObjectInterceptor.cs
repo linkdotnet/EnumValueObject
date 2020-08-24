@@ -17,7 +17,7 @@ namespace LinkDotNet.EnumValueObject.Converter.NHibernateInterceptor
         {
             var classMetadata = _session.SessionFactory.GetAllClassMetadata()[clazz];
             var type = classMetadata.MappedClass;
-            if (type.IsSubclassOf(typeof(EnumValueObject<>)))
+            if (type.IsSubclass(typeof(EnumValueObject<>)))
             {
                 var result = type.GetMethod("Create").Invoke(null, new[] {id}) as dynamic;
                 if (result.IsFailure)

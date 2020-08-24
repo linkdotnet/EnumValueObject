@@ -4,6 +4,7 @@ using LinkDotNet.EnumValueObject.Converter.NHibernateInterceptor;
 using NHibernate;
 using NHibernate.Cfg;
 using NHibernate.Tool.hbm2ddl;
+using Environment = NHibernate.Cfg.Environment;
 
 namespace LinkDotNet.EnumValueObject.Sample.NHibernateConverter
 {
@@ -19,7 +20,7 @@ namespace LinkDotNet.EnumValueObject.Sample.NHibernateConverter
 
         public void Initialize()
         {
-            Environment.UseReflectionOptimizer = false;
+            Environment.BytecodeProvider = new EnumValueObjectByteCodeProvider();
             _sessionFactory = CreateSessionFactory();
         }
 
@@ -30,8 +31,6 @@ namespace LinkDotNet.EnumValueObject.Sample.NHibernateConverter
                 .Mappings(m => m.FluentMappings.AddFromAssemblyOf<RootEntityMap>())
                 .ExposeConfiguration(cfg =>
                 {
-                    cfg.SetInterceptor(new EnumValueObjectInterceptor());
-                    cfg.Proxy(c => c.ProxyFactoryFactory<EnumValueObjectFactoryFactory>());
                     _configuration = cfg;
                 })
                 .BuildSessionFactory();
@@ -39,7 +38,7 @@ namespace LinkDotNet.EnumValueObject.Sample.NHibernateConverter
 
         public ISession OpenSession()
         {
-            var session = _sessionFactory.OpenSession();
+            var session = _sessionFactory.WithOptions().Interceptor(new EnumValueObjectInterceptor()).OpenSession();
 
             var export = new SchemaExport(_configuration);
             export.Execute(true, true, false, session.Connection, null);
