@@ -9,8 +9,6 @@ namespace LinkDotNet.EnumValueObject
     public abstract class EnumValueObject<TEnumeration> : ValueObject
         where TEnumeration : EnumValueObject<TEnumeration>
     {
-        private static readonly TEnumeration[] Enumerations = GetEnumerations();
-
         private string _key;
 
         protected EnumValueObject()
@@ -27,7 +25,7 @@ namespace LinkDotNet.EnumValueObject
             _key = key;
         }
 
-        public static IReadOnlyCollection<TEnumeration> All => Enumerations;
+        public static IReadOnlyCollection<TEnumeration> All => GetEnumerations();
 
         public virtual string Key
         {
