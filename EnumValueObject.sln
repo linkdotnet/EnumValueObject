@@ -15,9 +15,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinkDotNet.EnumValueObject.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Converter", "Converter", "{FD4DC042-1533-47B5-BCEC-AC8FA0F84AB2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkDotNet.EnumValueObject.Converter.JsonConverter", "Converter\LinkDotNet.EnumValueObject.Converter.JsonConverter\LinkDotNet.EnumValueObject.Converter.JsonConverter.csproj", "{EA3856C9-743F-423D-9CC1-D86B75D69D6F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinkDotNet.EnumValueObject.Converter.JsonConverter", "Converter\LinkDotNet.EnumValueObject.Converter.JsonConverter\LinkDotNet.EnumValueObject.Converter.JsonConverter.csproj", "{EA3856C9-743F-423D-9CC1-D86B75D69D6F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinkDotNet.EnumValueObject.Sample.JsonConverter", "Samples\LinkDotNet.EnumValueObject.Sample.JsonConverter\LinkDotNet.EnumValueObject.Sample.JsonConverter.csproj", "{040CB551-38C8-42BA-9A94-035B8E642326}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkDotNet.EnumValueObject.Converter.NewtonSoftJsonConverter", "LinkDotNet.EnumValueObject.Converter.NewtonSoftJsonConverter\LinkDotNet.EnumValueObject.Converter.NewtonSoftJsonConverter.csproj", "{2CE5EAA6-004B-4015-BE9E-6FBF37F7983C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +51,10 @@ Global
 		{040CB551-38C8-42BA-9A94-035B8E642326}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{040CB551-38C8-42BA-9A94-035B8E642326}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{040CB551-38C8-42BA-9A94-035B8E642326}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CE5EAA6-004B-4015-BE9E-6FBF37F7983C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CE5EAA6-004B-4015-BE9E-6FBF37F7983C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CE5EAA6-004B-4015-BE9E-6FBF37F7983C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CE5EAA6-004B-4015-BE9E-6FBF37F7983C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -58,6 +64,7 @@ Global
 		{F1B19454-305F-435F-98F6-22FBCE1FF056} = {A3BD761C-BD7B-4851-A938-5A4FF73BBD54}
 		{EA3856C9-743F-423D-9CC1-D86B75D69D6F} = {FD4DC042-1533-47B5-BCEC-AC8FA0F84AB2}
 		{040CB551-38C8-42BA-9A94-035B8E642326} = {A3BD761C-BD7B-4851-A938-5A4FF73BBD54}
+		{2CE5EAA6-004B-4015-BE9E-6FBF37F7983C} = {FD4DC042-1533-47B5-BCEC-AC8FA0F84AB2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DE9A468A-F35F-463B-B11C-8769F5307935}

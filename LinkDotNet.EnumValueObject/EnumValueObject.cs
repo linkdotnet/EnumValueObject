@@ -105,7 +105,7 @@ namespace LinkDotNet.EnumValueObject
         {
             var enumerationType = typeof(TEnumeration);
 
-            return enumerationType.GetFields(BindingFlags.Public | BindingFlags.Static | BindingFlags.DeclaredOnly)
+            return enumerationType.GetFields(BindingFlags.Public | BindingFlags.Static | BindingFlags.FlattenHierarchy)
                                   .Where(info => enumerationType.IsAssignableFrom(info.FieldType))
                                   .Select(info => info.GetValue(null))
                                   .Cast<TEnumeration>()
