@@ -14,7 +14,7 @@ Available on [![Nuget downloads](https://img.shields.io/nuget/v/LinkDotNet.EnumV
 | Package | Download | Description |
 |-|-|-|
 | LinkDotNet.EnumValueObject.Converter.JsonConverter | [![Nuget downloads](https://img.shields.io/nuget/v/LinkDotNet.EnumValueObject.Converter.JsonConverter)](https://www.nuget.org/packages/LinkDotNet.EnumValueObject.Converter.JsonConverter) | Use EnumValueObjects with System.Text.Json.JsonSerializer |
-| LinkDotNet.EnumValueObject.Converter.NewtonsoftJsonConverter | [![Nuget downloads](https://img.shields.io/nuget/v/LinkDotNet.EnumValueObject.Converter.NewtonsoftJsonConverter)](https://www.nuget.org/packages/LinkDotNet.EnumValueObject.Converter.NewtonsoftJsonConverter) | Use EnumValueObjects with Newtonsoft's JsonSerializer |
+| LinkDotNet.EnumValueObject.Converter.NewtonsoftJsonConverter | [![Nuget downloads](https://img.shields.io/nuget/v/LinkDotNet.EnumValueObject.Converter.NewtonsoftJsonConverter)](https://www.nuget.org/packages/LinkDotNet.EnumValueObject.Converter.NewtonsoftJsonConverter) | Use EnumValueObjects with Newtonsoft's JsonSerializer. This is extension is also helpful with RavenDb as RavenDb uses this Serializer when writing and reading to the database. |
 ## Type safety from beginning to end
 With this `EnumValueObject` you can only create a valid state of the object itself. Imagine this small `EnumValueObject`
 
@@ -100,11 +100,21 @@ It is enough to store the key to the database. When the `EnumValueObject` is pop
 
 ## JSON Serializer Support
 See the samples how to use `EnumValueObjects` with the `System.Text.Json.JsonSerializer` without any problems (and without any parameterless constructor). With the extension you don't have to provide a private or public parameterless constructor. Just add the attribute to your property and you are done.
-
 ```csharp
 public class MyDto
 {
     [JsonConverter(typeof(EnumValueObjectJsonConverter<MyEnumValueObject>))]
+    public MyEnumValueObject MyEnumValueObject { get; set; }
+}
+```
+
+If you wanna persist your `EnumValueObjects` with RavenDb, equip them with the `Newtonsoft.Json.JsonConverter` attribute add the Converter:
+```cshasp
+public class EntityWhichGetsPersistedWithRavenDb
+{
+    public string Id { get; set; }
+
+    [JsonConverter(typeof(EnumValueObjectNewtonsoftJsonConverter<JsonEnumValueObject>))]
     public MyEnumValueObject MyEnumValueObject { get; set; }
 }
 ```
