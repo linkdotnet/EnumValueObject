@@ -2,6 +2,10 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Description>Helper for Newtonsoft's JsonSerializer in combination with EnumValueObject</Description>
+    <RepositoryUrl>https://github.com/linkdotnet/EnumValueObject</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/linkdotnet/EnumValueObject</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>
