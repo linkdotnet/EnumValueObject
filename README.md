@@ -114,7 +114,7 @@ public class EntityWhichGetsPersistedWithRavenDb
 {
     public string Id { get; set; }
 
-    [JsonConverter(typeof(EnumValueObjectNewtonsoftJsonConverter<JsonEnumValueObject>))]
+    [JsonConverter(typeof(EnumValueObjectNewtonsoftJsonConverter<MyEnumValueObject>))]
     public MyEnumValueObject MyEnumValueObject { get; set; }
 }
 ```
