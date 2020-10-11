@@ -109,7 +109,7 @@ public class MyDto
 ```
 
 If you wanna persist your `EnumValueObjects` with RavenDb, equip them with the `Newtonsoft.Json.JsonConverter` attribute add the Converter:
-```cshasp
+```csharp
 public class EntityWhichGetsPersistedWithRavenDb
 {
     public string Id { get; set; }
