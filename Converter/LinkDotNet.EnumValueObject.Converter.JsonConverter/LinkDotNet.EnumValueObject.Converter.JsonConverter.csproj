@@ -13,7 +13,7 @@
 
   <ItemGroup>
     <PackageReference Include="LinkDotNet.EnumValueObject" Version="1.0.6" />
-    <PackageReference Include="System.Text.Json" Version="4.7.2" />
+    <PackageReference Include="System.Text.Json" Version="5.0.0" />
   </ItemGroup>
 
   <ItemGroup>
