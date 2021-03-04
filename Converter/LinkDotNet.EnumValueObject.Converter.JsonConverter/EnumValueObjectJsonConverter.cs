@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Data.SqlTypes;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
