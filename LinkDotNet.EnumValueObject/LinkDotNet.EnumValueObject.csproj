@@ -10,8 +10,8 @@
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageTags>ValueObject Enum EnumValueObject domain-driven-design</PackageTags>
-    <Version>1.0.7</Version>
-    <PackageVersion>1.0.7</PackageVersion>
+    <Version>1.0.7.1</Version>
+    <PackageVersion>1.0.7.1</PackageVersion>
   </PropertyGroup>
 
   <ItemGroup>
