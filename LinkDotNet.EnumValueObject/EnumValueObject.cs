@@ -105,11 +105,11 @@ namespace LinkDotNet.EnumValueObject
         {
             var enumerationType = typeof(TEnumeration);
 
-            return enumerationType.GetFields(BindingFlags.Public | BindingFlags.Static | BindingFlags.FlattenHierarchy)
-                                  .Where(info => enumerationType.IsAssignableFrom(info.FieldType))
-                                  .Select(info => info.GetValue(null))
-                                  .Cast<TEnumeration>()
-                                  .ToArray();
+            return enumerationType
+                .GetFields(BindingFlags.Public | BindingFlags.Static | BindingFlags.DeclaredOnly)
+                .Where(info => info.FieldType == typeof(TEnumeration))
+                .Select(info => (TEnumeration)info.GetValue(null))
+                .ToArray();
         }
     }
 }
